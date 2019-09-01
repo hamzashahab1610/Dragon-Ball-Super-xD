@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import CardList from './cardList';
 import SearchBox from './SearchBox';
-import {robots} from './5.1 robots.js';
+import {warriors} from './warriors.js';
+import Logo from './1.png'
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
             searchfield: '',
-            robots: robots
+            warriors: warriors
         }
     }
 
@@ -18,14 +19,17 @@ class App extends Component {
     }
 
     render(){
-        const filteredrobos = this.state.robots.filter(robots => {
-            return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        const filter = this.state.warriors.filter(warriors => {
+            return warriors.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })
         return(
             <div className='tc'>
-                <h1>RoboFriends</h1>
-                <SearchBox searchChange={this.onSearchChange}/>
-                <CardList robots={filteredrobos}/>
+                <div className='center grow'>
+                    <img src={Logo} className='h-100 w-50' alt=''/>
+                </div> 
+                <div><SearchBox searchChange={this.onSearchChange}/></div>               
+                <div><br></br><CardList warriors={filter}/></div>
+                
             </div>        
         )
     }

@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-//import CardList from './cardList'
 import 'tachyons';
-//import {robots} from './5.1 robots.js';
 import App from './App';
 
 ReactDOM.render(<App/>,document.getElementById('root'));
