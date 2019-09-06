@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import CardList from './cardList';
-import SearchBox from './SearchBox';
-import {warriors} from './warriors.js';
-import Logo from './1.png'
+import CardList from '../component/cardList';
+import SearchBox from '../component/SearchBox';
+import {warriors} from '../component/warriors.js';
+import Logo from '../1.png'
+import Scroll from '../component/scroll'
 
 class App extends Component {
     constructor() {
@@ -27,9 +28,10 @@ class App extends Component {
                 <div className='center grow'>
                     <img src={Logo} className='h-100 w-50' alt=''/>
                 </div> 
-                <div><SearchBox searchChange={this.onSearchChange}/></div>               
-                <div><br></br><CardList warriors={filter}/></div>
-                
+                <div><SearchBox searchChange={this.onSearchChange}/></div> 
+                <Scroll>
+                    <div><br></br><CardList warriors={filter}/></div>
+                </Scroll>          
             </div>        
         )
     }
