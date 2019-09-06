@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import CardList from '../component/cardList';
 import SearchBox from '../component/SearchBox';
 import {warriors} from '../component/warriors.js';
-import Logo from '../1.png'
-import Scroll from '../component/scroll'
+import Logo from '../1.png';
+import Scroll from '../component/scroll';
+import ErrorBoundry from '../component/ErrorBoundry';
 
 class App extends Component {
     constructor() {
@@ -30,7 +31,9 @@ class App extends Component {
                 </div> 
                 <div><SearchBox searchChange={this.onSearchChange}/></div> 
                 <Scroll>
-                    <div><br></br><CardList warriors={filter}/></div>
+                    <ErrorBoundry>
+                        <div><br></br><CardList warriors={filter}/></div>
+                    </ErrorBoundry>                    
                 </Scroll>          
             </div>        
         )
