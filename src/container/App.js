@@ -31,9 +31,9 @@ class App extends Component {
                 </div> 
                 <div><SearchBox searchChange={this.onSearchChange}/></div> 
                 <Scroll>
-                    <ErrorBoundry>
+                    {/* <ErrorBoundry> */}
                         <div><br></br><CardList warriors={filter}/></div>
-                    </ErrorBoundry>                    
+                    {/* </ErrorBoundry>                     */}
                 </Scroll>          
             </div>        
         )

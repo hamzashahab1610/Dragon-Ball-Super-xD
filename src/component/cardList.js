@@ -2,8 +2,8 @@ import React from 'react';
 import Card from './card';
 
 const CardList = ({warriors}) => {
-    if(true)
-        throw new Error('ERROR!!');    
+    // if(true)
+    //     throw new Error('ERROR!!');    
         
     return (
         <div>
