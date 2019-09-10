@@ -30,11 +30,11 @@ class App extends Component {
                     <img src={Logo} className='h-100 w-50' alt=''/>
                 </div> 
                 <div><SearchBox searchChange={this.onSearchChange}/></div> 
-                <Scroll>
+                {/* <Scroll> */}
                     {/* <ErrorBoundry> */}
                         <div><br></br><CardList warriors={filter}/></div>
                     {/* </ErrorBoundry>                     */}
-                </Scroll>          
+                {/* </Scroll>           */}
             </div>        
         )
     }

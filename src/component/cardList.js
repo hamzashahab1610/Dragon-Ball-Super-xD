@@ -14,6 +14,7 @@ const CardList = ({warriors}) => {
                     id={warriors[i].id} 
                     name={warriors[i].name}
                     img={warriors[i].img}  
+                    url={warriors[i].url}
                     />
                 );
                 })
