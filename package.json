@@ -2,7 +2,7 @@
   "name": "robofriends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hamzashahab1610.github.io/dragonballsuper",
+  "homepage": ".",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "lodash": "^4.17.15",
